@@ -1,10 +1,11 @@
 {
   "name": "dashboard-widgets",
-  "version": "0.1.1",
+  "version": "0.1.10",
   "description": "A collection of widgets to help create a clean dashboard for web applications with react easily.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,13 @@
     "ux"
   ],
   "author": "Benjamin Lehmann",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
