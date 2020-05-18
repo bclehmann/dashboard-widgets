@@ -1,6 +1,6 @@
 {
   "name": "dashboard-widgets",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of widgets to help create a clean dashboard for web applications with react easily.",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,5 @@
     "ux"
   ],
   "author": "Benjamin Lehmann",
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+  "license": "MIT"
 }
