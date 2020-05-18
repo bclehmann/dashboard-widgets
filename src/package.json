@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/Benny121221/react-dashboard-widgets"
+    "type": "git",
+    "url": "https://github.com/Benny121221/react-dashboard-widgets"
   },
   "keywords": [
     "widget",
@@ -21,6 +21,6 @@
   "author": "Benjamin Lehmann",
   "license": "MIT",
   "publishConfig": {
-	"registry": "https://npm.pkg.github.com/" 
+    "registry": "https://npm.pkg.github.com/"
   }
 }
