@@ -7,3 +7,5 @@ export class Test extends React.Component{
 		return <h1>dashboard-widgets says Hello World</h1>
 	}
 }
+
+export const author = "Benjamin Lehmann"

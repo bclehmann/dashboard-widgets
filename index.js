@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Test = exports["default"] = void 0;
+exports.author = exports.Test = exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -56,3 +56,5 @@ var Test = /*#__PURE__*/function (_React$Component) {
 }(_react["default"].Component);
 
 exports.Test = Test;
+var author = "Benjamin Lehmann";
+exports.author = author;
