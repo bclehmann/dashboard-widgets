@@ -1,6 +1,16 @@
 [![npm version](https://badge.fury.io/js/dashboard-widgets.svg)](https://badge.fury.io/js/dashboard-widgets)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/dashboard-widgets)
 
+
+# Installation
+`$ npm i dashboard-widgets`
+
+Then simply import the modules you want:
+
+`import {Badge} from dashboard-widgets`
+
+The details of how to use each module are below
+
 # Features
 - Badges
 - Phone Element
@@ -49,6 +59,11 @@ It is quite easy to detect that the client prefers dark/night mode from CSS. It 
     if(isDarkMode){
 	    //Code
 	}
+
+# Links
+- NPM Page: https://www.npmjs.com/package/dashboard-widgets
+- Github Repo: https://github.com/Benny121221/dashboard-widgets
+
 
 # Contribution
 If you're feeling generous, feel free to put in a PR. This is all under the MIT License.
