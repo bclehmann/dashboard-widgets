@@ -1,0 +1,27 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.circle-number {
+    font-size: 3em;
+    position: relative;
+    top: -100px;
+    left: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.circle-container {
+    height: 120px;
+    width: 140px;
+}
+
+.badge-subtitle {
+    font-size: 1.3em;
+    text-align: center;
+    position:relative;
+    top: -3.6em;
+	left: -0.5em;
+}
