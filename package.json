@@ -1,8 +1,8 @@
 {
-  "_from": "dashboard-widgets@^0.1.10",
-  "_id": "dashboard-widgets@0.1.11",
+  "_from": "dashboard-widgets@0.2.0",
+  "_id": "dashboard-widgets@0.2.0",
   "_inBundle": false,
-  "_integrity": "sha512-4gCSf/AUZaR/9oPxNTBRJenJgTjQLczC497lMseD5x8hmjX1vfuEy1birsJidCeCHZZjuPgTOanIyi60uji+kw==",
+  "_integrity": "sha512-X0fodEQ+5pMpxqImZdSoQBQgeybThprONQIHLT0gZMakbb8yNuk/GevcMWQ1fsTmy0M883qKp1yXqtTuWI2T/g==",
   "_location": "/dashboard-widgets",
   "_phantomChildren": {
     "@babel/code-frame": "7.8.3",
@@ -22,22 +22,22 @@
     "source-map": "0.5.7"
   },
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "dashboard-widgets@^0.1.10",
+    "raw": "dashboard-widgets@0.2.0",
     "name": "dashboard-widgets",
     "escapedName": "dashboard-widgets",
-    "rawSpec": "^0.1.10",
+    "rawSpec": "0.2.0",
     "saveSpec": null,
-    "fetchSpec": "^0.1.10"
+    "fetchSpec": "0.2.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/dashboard-widgets/-/dashboard-widgets-0.1.11.tgz",
-  "_shasum": "73c017069e8a4364c049110ac9b66c126f5512a6",
-  "_spec": "dashboard-widgets@^0.1.10",
+  "_resolved": "https://registry.npmjs.org/dashboard-widgets/-/dashboard-widgets-0.2.0.tgz",
+  "_shasum": "80dea618a92e2a61b54f6e35359d5b17ce1453e6",
+  "_spec": "dashboard-widgets@0.2.0",
   "_where": "C:\\Users\\benny\\source\\repos\\DashboardWidget-Testing\\ClientApp",
   "author": {
     "name": "Benjamin Lehmann"
@@ -76,5 +76,5 @@
     "build": "babel src --out-dir . --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.2.2"
+  "version": "0.2.0"
 }

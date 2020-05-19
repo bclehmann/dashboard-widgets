@@ -3,17 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Badge = exports.author = exports.Test = exports["default"] = void 0;
+exports.Phone = exports.Badge = exports.isDarkMode = exports.author = exports.Test = exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var bd = _interopRequireWildcard(require("./badge.js"));
+var badge = _interopRequireWildcard(require("./badge.js"));
+
+var phone = _interopRequireWildcard(require("./phone.js"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -38,7 +40,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 var _default = "The default export of dashboard-widgets does nothing. Import the module you want explicitly, or use import * as dw";
-exports["default"] = _default;
+exports.default = _default;
 
 var Test = /*#__PURE__*/function (_React$Component) {
   _inherits(Test, _React$Component);
@@ -54,15 +56,19 @@ var Test = /*#__PURE__*/function (_React$Component) {
   _createClass(Test, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement("h1", null, "dashboard-widgets says Hello World");
+      return /*#__PURE__*/_react.default.createElement("h1", null, "dashboard-widgets says Hello World");
     }
   }]);
 
   return Test;
-}(_react["default"].Component);
+}(_react.default.Component);
 
 exports.Test = Test;
 var author = "Benjamin Lehmann";
 exports.author = author;
-var Badge = bd["default"];
+var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+exports.isDarkMode = isDarkMode;
+var Badge = badge.default;
 exports.Badge = Badge;
+var Phone = phone.default;
+exports.Phone = Phone;
