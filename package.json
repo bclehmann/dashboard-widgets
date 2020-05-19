@@ -1,8 +1,8 @@
 {
-  "_from": "dashboard-widgets@0.2.0",
-  "_id": "dashboard-widgets@0.2.0",
+  "_from": "dashboard-widgets@1",
+  "_id": "dashboard-widgets@1.0.1",
   "_inBundle": false,
-  "_integrity": "sha512-X0fodEQ+5pMpxqImZdSoQBQgeybThprONQIHLT0gZMakbb8yNuk/GevcMWQ1fsTmy0M883qKp1yXqtTuWI2T/g==",
+  "_integrity": "sha512-OzlUAzuhFcImpzWqR2PvgfcLYCvcawIOwt3aiWN+D59/6HPvpvxe1YBNlA10/uh/b8GIKdJtFLR5id+qTf1fnw==",
   "_location": "/dashboard-widgets",
   "_phantomChildren": {
     "@babel/code-frame": "7.8.3",
@@ -22,23 +22,23 @@
     "source-map": "0.5.7"
   },
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "dashboard-widgets@0.2.0",
+    "raw": "dashboard-widgets@1",
     "name": "dashboard-widgets",
     "escapedName": "dashboard-widgets",
-    "rawSpec": "0.2.0",
+    "rawSpec": "1",
     "saveSpec": null,
-    "fetchSpec": "0.2.0"
+    "fetchSpec": "1"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/dashboard-widgets/-/dashboard-widgets-0.2.0.tgz",
-  "_shasum": "80dea618a92e2a61b54f6e35359d5b17ce1453e6",
-  "_spec": "dashboard-widgets@0.2.0",
-  "_where": "C:\\Users\\benny\\source\\repos\\DashboardWidget-Testing\\ClientApp",
+  "_resolved": "https://registry.npmjs.org/dashboard-widgets/-/dashboard-widgets-1.0.1.tgz",
+  "_shasum": "1377d251a734ef7da562026ea12ac803957d4c70",
+  "_spec": "dashboard-widgets@1",
+  "_where": "C:\\Users\\benny\\source\\repos\\DashboardWidget-Testing\\ClientApp\\node_modules",
   "author": {
     "name": "Benjamin Lehmann"
   },
@@ -51,6 +51,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -67,13 +68,17 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "types": "index.d.ts",
   "name": "dashboard-widgets",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Benny121221/dashboard-widgets.git"
   },
   "scripts": {
-    "build": "babel src --out-dir . --copy-files",
+    "buildts": "tsc --jsx react --declaration true",
+    "buildbabel": "babel src --extensions \".js\",\".jsx\" --out-dir . --copy-files",
+    "build": "npm run-script buildts && npm run-script buildbabel",
+    "help": "type note_on_compilation.txt | more",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.1"

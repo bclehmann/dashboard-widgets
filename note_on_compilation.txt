@@ -1,0 +1,12 @@
+	npm run-script build does two things:
+	
+	Executes the typescript compiler
+		Compiled files are copied to the main directory
+	
+	Executes babel
+		Compiles only .js and .jsx files, copying them to the main directory
+		Copies all other files to the main directory (e.g. CSS files)
+
+	ANY .js/.jsx FILE WITH THE SAME NAME (excluding file extension) AS A .ts/.tsx FILE WILL BE OVERWRITTEN
+		Overwriting will be unceremonious and violent.
+
