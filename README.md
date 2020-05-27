@@ -12,12 +12,53 @@ Then simply import the modules you want:
 The details of how to use each module are below
 
 # Features
+- Auto-apply formatting to tables
 - Badges
 - Phone Element
 - Dark Mode Detect
 
+## Tables
+
+Use `import { FormatTableRow } from "dashboard-widgets"`
+
+Pass in data and a function to act as a formatRule. The `formatRule` prop takes in a cell and returns a classname as a string. `formatRuleRow` does the same thing but for a table row (represented as an array of cells).
+
+```tsx
+<table className="table bigText">
+  <tr>
+    <th>Column 1</th>
+    <th>Column 2</th>
+    <th>Column 3</th>
+  </tr>
+  <FormatTableRow data={[
+      ["1", "a", 1.0],
+      [2, "b", 2.0]
+    ]}
+    formatRule={(cell) => typeof cell == "number" ? "displayRed" : ""}
+    formatRuleRow={(row)=> typeof row[0] == "number" ? "displayGreen" : ""}
+  />
+</table>
+```
+
+With the following CSS classes:
+
+```css
+.displayRed {
+  color: red;
+}
+
+.displayGreen {
+  color: green;
+}
+```
+
+Produces this output:
+<img src="https://i.imgur.com/gXmmRH0.png" alt="Table1">
+
+Note that the `.table` class is from bootstrap. This example uses bootstrap styling but it is not required, nor is it a dependency of this project. Bootstrap is available here: https://getbootstrap.com/
+
 ## Badges
-![Badge1](https://i.imgur.com/hqXI6Yb.png)
+<img src="https://i.imgur.com/hqXI6Yb.png" alt="Badge1" width="200" height="200">
 This can be done with:
 
     import {Badge} from "dashboard-widgets"
@@ -25,7 +66,8 @@ This can be done with:
 
 Similarly, you can have a filled badge like the following:
 
-![Badge2](https://i.imgur.com/SXSSkyp.png)
+<img src="https://i.imgur.com/SXSSkyp.png" alt="Badge2" width="200" height="220">
+
 
     import {Badge} from "dashboard-widgets"
     <Badge number={102} subtitle="Score" stroke="#a0f0a0" type="fill" />
@@ -33,7 +75,8 @@ Similarly, you can have a filled badge like the following:
 ## Phone Element
 
 You can add elements within a phone screen like this:
-![Phone1](https://i.imgur.com/cWaZ2X4.png)
+
+<img src="https://i.imgur.com/cWaZ2X4.png" alt="Phone1">
 
 The code here is simple:
 
@@ -44,7 +87,7 @@ The code here is simple:
 
 You can create a smaller and more minimalist phone by passing a truthy value to the `small` prop:
 
-![Phone 2](https://i.imgur.com/5tNaTeh.png)
+<img src="https://i.imgur.com/5tNaTeh.png" alt="Phone2">
 
     import {Phone} from 'dashboard-widgets'
     <Phone small={true}>
