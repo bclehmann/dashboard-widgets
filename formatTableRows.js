@@ -30,22 +30,34 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var formatTableRows = require("./formatTableRows.js");
+var React = require("react");
 
-var FormatTableRow =
+var FormatTableRows =
 /** @class */
 function (_super) {
-  __extends(FormatTableRow, _super);
+  __extends(FormatTableRows, _super);
 
-  function FormatTableRow(props) {
-    var _this = this;
-
-    console.warn("dashboard-widgets.FormatTableRow is deprecated. Use FormatTableRows instead.");
-    _this = _super.call(this, props) || this;
-    return _this;
+  function FormatTableRows(props) {
+    return _super.call(this, props) || this;
   }
 
-  return FormatTableRow;
-}(formatTableRows["default"]);
+  FormatTableRows.prototype.render = function () {
+    var _this = this;
 
-exports["default"] = FormatTableRow;
+    return this.props.data.map(function (row, i) {
+      return React.createElement("tr", {
+        key: i,
+        className: _this.props.formatRuleRow(row)
+      }, row.map(function (cell, j) {
+        return React.createElement("td", {
+          className: _this.props.formatRule(cell),
+          key: j
+        }, cell);
+      }));
+    });
+  };
+
+  return FormatTableRows;
+}(React.Component);
+
+exports["default"] = FormatTableRows;

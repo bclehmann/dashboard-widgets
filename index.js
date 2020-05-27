@@ -29,7 +29,7 @@ var __extends = void 0 && (void 0).__extends || function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FormatTableRow = exports.Phone = exports.Badge = exports.isDarkMode = exports.author = exports.Test = void 0;
+exports.FormatTableRow = exports.FormatTableRows = exports.Phone = exports.Badge = exports.isDarkMode = exports.author = exports.Test = void 0;
 
 var React = require("react");
 
@@ -38,6 +38,8 @@ var badge = require("./badge.js");
 var phone = require("./phone.js");
 
 var formatTableRow = require("./formatTableRow.js");
+
+var formatTableRows = require("./formatTableRows.js");
 
 var defaultMessage = "The default export of dashboard-widgets does nothing. Import the module you want explicitly, or use import * as dw";
 exports["default"] = defaultMessage;
@@ -63,4 +65,5 @@ exports.author = "Benjamin Lehmann";
 exports.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 exports.Badge = badge["default"];
 exports.Phone = phone["default"];
+exports.FormatTableRows = formatTableRows["default"];
 exports.FormatTableRow = formatTableRow["default"];

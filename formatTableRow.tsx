@@ -1,25 +1,9 @@
-import * as React from "react"
+import * as formatTableRows from './formatTableRows.js'
 
-export interface PropType {
-	formatRule: (cell: any) => string;
-	formatRuleRow: (row: any[]) => string;
-	data: any[][];
-}
-
-class FormatTableRow extends React.Component<PropType, any> {
-	props: PropType;
+class FormatTableRow extends formatTableRows.default {
 	constructor(props) {
+		console.warn("dashboard-widgets.FormatTableRow is deprecated. Use FormatTableRows instead.")
 		super(props);
-	}
-
-	render() {
-		return this.props.data.map((row: any[], i: number) => (
-			<tr key={i} className={this.props.formatRuleRow(row)}>{
-				row.map((cell: any, j: number) => (
-					<td className={this.props.formatRule(cell)} key={j}>{cell}</td>
-				))
-			}</tr>
-		))
 	}
 }
 
