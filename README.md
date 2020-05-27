@@ -19,7 +19,7 @@ The details of how to use each module are below
 
 ## Tables
 
-Use `import { FormatTableRow } from "dashboard-widgets"`
+Use `import { FormatTableRows } from "dashboard-widgets"`
 
 Pass in data and a function to act as a formatRule. The `formatRule` prop takes in a cell and returns a classname as a string. `formatRuleRow` does the same thing but for a table row (represented as an array of cells).
 
@@ -30,7 +30,7 @@ Pass in data and a function to act as a formatRule. The `formatRule` prop takes 
     <th>Column 2</th>
     <th>Column 3</th>
   </tr>
-  <FormatTableRow data={[
+  <FormatTableRows data={[
       ["1", "a", 1.0],
       [2, "b", 2.0]
     ]}
