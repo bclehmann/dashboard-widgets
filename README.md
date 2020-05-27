@@ -59,6 +59,8 @@ Note that the `.table` class is from bootstrap. This example uses bootstrap styl
 
 ## Badges
 <img src="https://i.imgur.com/hqXI6Yb.png" alt="Badge1" width="200" height="200">
+
+
 This can be done with:
 
     import {Badge} from "dashboard-widgets"
