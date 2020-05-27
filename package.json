@@ -1,8 +1,8 @@
 {
-  "_from": "dashboard-widgets@1",
-  "_id": "dashboard-widgets@1.0.1",
+  "_from": "dashboard-widgets@^1.0.1",
+  "_id": "dashboard-widgets@1.1.1",
   "_inBundle": false,
-  "_integrity": "sha512-OzlUAzuhFcImpzWqR2PvgfcLYCvcawIOwt3aiWN+D59/6HPvpvxe1YBNlA10/uh/b8GIKdJtFLR5id+qTf1fnw==",
+  "_integrity": "sha512-2GcGVELKTSYTCEKKXqZUT8PoFva8Rnx9zN5Gk8/XR0JQxZr2OK68kBybJAk/1nJNU5qdCTzyMDUG1x/MCE1yDw==",
   "_location": "/dashboard-widgets",
   "_phantomChildren": {
     "@babel/code-frame": "7.8.3",
@@ -24,21 +24,21 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "dashboard-widgets@1",
+    "raw": "dashboard-widgets@^1.0.1",
     "name": "dashboard-widgets",
     "escapedName": "dashboard-widgets",
-    "rawSpec": "1",
+    "rawSpec": "^1.0.1",
     "saveSpec": null,
-    "fetchSpec": "1"
+    "fetchSpec": "^1.0.1"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/dashboard-widgets/-/dashboard-widgets-1.0.1.tgz",
-  "_shasum": "1377d251a734ef7da562026ea12ac803957d4c70",
-  "_spec": "dashboard-widgets@1",
-  "_where": "C:\\Users\\benny\\source\\repos\\DashboardWidget-Testing\\ClientApp\\node_modules",
+  "_resolved": "https://registry.npmjs.org/dashboard-widgets/-/dashboard-widgets-1.1.1.tgz",
+  "_shasum": "672b37bc8a7418977e5d6831de5eaa2ca230c534",
+  "_spec": "dashboard-widgets@^1.0.1",
+  "_where": "C:\\Users\\benny\\source\\repos\\DashboardWidget-Testing\\ClientApp",
   "author": {
     "name": "Benjamin Lehmann"
   },
@@ -68,18 +68,18 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "types": "index.d.ts",
   "name": "dashboard-widgets",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Benny121221/dashboard-widgets.git"
   },
   "scripts": {
-    "buildts": "tsc --jsx react --declaration true",
-    "buildbabel": "babel src --extensions \".js\",\".jsx\" --out-dir . --copy-files",
     "build": "npm run-script buildts && npm run-script buildbabel",
+    "buildbabel": "babel src --extensions \".js\",\".jsx\" --out-dir . --copy-files",
+    "buildts": "tsc --jsx react --declaration true",
     "help": "type note_on_compilation.txt | more",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "index.d.ts",
   "version": "1.1.1"
 }
