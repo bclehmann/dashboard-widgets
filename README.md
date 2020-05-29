@@ -92,7 +92,7 @@ The code here is simple:
 ```tsx
 import {Phone} from 'dashboard-widgets'
 <Phone>
-	//Your content here
+  //Your content here
 </Phone>
 ```
 You can create a smaller and more minimalist phone by passing a truthy value to the `small` prop:
@@ -102,7 +102,7 @@ You can create a smaller and more minimalist phone by passing a truthy value to 
 ```tsx
 import {Phone} from 'dashboard-widgets'
 <Phone small={true}>
-    //Your content here
+  //Your content here
 </Phone>
 ```
 
@@ -112,7 +112,7 @@ It is quite easy to detect that the client prefers dark/night mode from CSS. It 
 ```tsx
 import { isDarkMode } from "dashboard-widgets"
 if(isDarkMode){
-	//Code
+  //Code
 }
 ```
 # Links
